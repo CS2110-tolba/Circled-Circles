@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circeld Circles</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: linear-gradient(90deg,rgb(49, 6, 117),rgb(160, 25, 25),white,rgb(160, 25, 25),rgb(49, 6, 117)) no-repeat;
+        height: 100vh;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .circle *{
+        border-radius: 50%;
+        display: inline-block;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.3s;
+    }
+    /*Circles*/
+    .circle .red{
+        height: 300px;
+        width: 300px;
+        background-color: red;
+    }
+    .circle .green{
+        height: 250px;
+        width: 250px;
+        background-color: green;
+    }
+    .circle .blue{
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+    /*Hover*/
+    .circle:hover .red{
+        height: 350px;
+        width: 350px;
+        background-color: blue;
+    }
+    .circle:hover .green{
+        height: 300px;
+        width: 300px;
+        background-color: red;
+    }
+    .circle:hover .blue{
+        height: 250px;
+        width: 250px;
+        background-color: green;
+    }
+    /*Active*/
+    .circle:active .red{
+        height: 250px;
+        width: 250px;
+        background-color: green;
+    }
+    .circle:active .green{
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+    .circle:active .blue{
+        height: 150px;
+        width: 150px;
+        background-color: red;
+    }
+    /*Black*/
+    .circle .black{
+        background-color: black;
+        height: 30px;
+        width: 30px;
+        user-select: none;
+        pointer-events: none;
+    }
+    /*CheckBox*/
+    .circle #checkbox:checked + .black{
+        transform: scale(100);
+    }
+</style>
+<body>
+    <label for="checkbox" class="circle">
+        <input type="checkbox" id="checkbox">
+        <span class="black"></span>
+        <span class="red"></span>
+        <span class="green"></span>
+        <span class="blue"></span>
+    </label>  
+</body>
+</html>
