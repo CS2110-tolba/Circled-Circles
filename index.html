@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circled Circle</title>
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: linear-gradient(
+                90deg,
+                #3e204f,#5a4565,#cec9d6,#e2dbe9,#bcaecc)
+                no-repeat;
+                height: 100vh;
+                overflow: hidden;
+        }
+
+        .circle * {
+                border-radius: 50%;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+
+                transition: all 0.25s;
+            }
+
+        /* Default */
+
+        .circle .biggest{
+            background-color: red;
+            width: 250px;
+            height: 250px;
+        }
+
+        .circle .mid{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+        }
+
+        .circle .small{
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+        }
+
+        .circle .black{
+            background-color: black;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Hover */
+
+        .circle:hover .biggest{
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+        }
+
+        .circle:hover .mid{
+            background-color: red;
+            width: 250px;
+            height: 250px;
+        }
+
+        .circle:hover .small{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+        }
+        
+        /* Active */
+
+        .circle:active .biggest{
+            background-color: green;
+            width: 265px;
+            height: 265px;
+        }
+
+        .circle:active .mid{
+            background-color: blue;
+            width: 215px;
+            height: 215px;
+        }
+
+        .circle:active .small{
+            background-color: red;
+            width: 165px;
+            height: 165px;
+        }
+
+        /* Black Screen */
+        .circle #black_btn:checked + .black{
+            transform: scale(100);
+            pointer-events: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <label for="black_btn" class="circle">
+        <input type="checkbox" id="black_btn">
+        <div class="black"></div>
+
+        <div class="biggest"></div>
+        <div class="mid"></div>
+        <div class="small"></div>
+    </label>
+
+</body>
+</html>
