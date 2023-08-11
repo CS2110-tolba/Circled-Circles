@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circled-Circles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(90deg,black,rgb(1, 252, 252),red,purple,blue)no-repeat;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #circ *
+        {
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            transition: all 0.3s;
+        }
+        #circ #red{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        #circ #green
+        {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+        #circ #blue{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #circ:hover #red{
+            width: 350px;
+            height: 350px;
+            background-color: blue;
+        }
+        #circ:hover #green
+        {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        #circ:hover #blue{
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+
+        #circ:active #red{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+        #circ:active #green
+        {
+            width: 240px;
+            height: 240px;
+            background-color: blue;
+        }
+        #circ:active #blue{
+            width: 195px;
+            height: 195px;
+            background-color: red;
+        }
+
+        #circ #black
+        {
+            background-color: black; 
+            height: 30px;
+            width: 30px;
+            cursor: none;
+            pointer-events: none;
+        }
+
+        #circ #checkbox:checked + #black{
+            transform: scale(70);
+
+        }
+
+
+    </style>
+</head>
+<body>
+   
+    <label for="checkbox" id="circ">
+    <input type="checkbox" id="checkbox"/>
+    <div id="black"></div>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    </label>
+</body>
+</html>
