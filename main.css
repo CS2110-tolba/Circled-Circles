@@ -1,0 +1,134 @@
+
+body{
+ 
+  background:linear-gradient(90deg,rgb(132, 206, 217),rgb(57, 149, 159),rgb(42, 102, 113),rgb(9, 60, 72),#071a41,black )no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  
+ 
+} 
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  }
+  
+ .all .red,
+ .all .green,
+ .all .white,
+ .all .blue {
+    margin: auto;
+    border-radius: 50%;
+    position: absolute; 
+    transition: all;
+    transition-duration: 0.5s;
+  }
+  .all .red {
+    width: 200px; 
+    height: 200px; 
+    background-color: red;
+    top: 0; 
+    bottom: 0; 
+  }
+ .all .green {
+    width: 150px; 
+    height: 150px; 
+    background-color: rgb(18, 2, 2);
+    top: 30px; 
+    bottom: 30px; 
+  }
+
+ .all .white {
+    width: 50px; 
+    height: 50px; 
+    background-color: rgb(133, 187, 150);
+    top: 90px; 
+    bottom: 90px; 
+  }
+  
+ .all .blue { 
+   
+    width: 25px; 
+    height: 25px; 
+    background-color: rgb(32, 3, 40);
+    top: 120px; 
+    bottom: 120px; 
+  }
+.all .black
+  {
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: black;
+    width: 2%;
+    height: 4%;
+  
+  }
+  #checkbox
+  {
+  
+    position: absolute;
+    top: 48.5%;
+  }
+
+  
+  .all:hover .red
+  {
+    background-color: rgb(32, 3, 40);
+
+  }
+  .all:hover .blue
+  {
+background-color: red;
+  }
+  .all:hover .white
+  {
+   background-color: rgb(40, 37, 23)
+  }
+.all:hover .green
+{
+    background-color: rgb(111, 230, 127);
+}
+.all:active .red
+{
+  
+    background-color: rgb(207, 195, 129);
+
+}
+.all #checkbox:checked + .black
+{
+   background-color: black;
+   transition-duration: 1s;
+   
+   
+   transform: scale(100);
+   transform: scale(2s);
+    
+}
+
+
+.all:active .white
+{
+ background-color:rgb(133, 187, 150);
+}
+
+.all:active .black
+{
+ 
+  background-color: rgb(32, 3, 40);
+
+}
+.all:active .green
+{
+    background-color: rgb(18, 2, 2);
+}
+.c h4{
+  z-index: 100;
+  color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: end;
+}
+
+
