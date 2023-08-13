@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        body {
+            background: linear-gradient(90deg, red, orange, blue, yellow, brown) no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mostafashinko *:not(input) {
+            border-radius: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+
+
+        }
+
+
+        .mostafashinko .the-red-circle {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .mostafashinko .the-green-circle {
+            width: 60px;
+            height: 60pxx;
+            background-color: green;
+        }
+
+        .mostafashinko .the-blue-circle {
+            width: 75px;
+            height: 75px;
+            background-color: blue;
+        }
+
+
+
+        .mostafashinko:hover .the-red-circle {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .mostafashinko:hover .the-green-circle {
+            width: 175px;
+            height: 175px;
+            background-color: red;
+        }
+
+        .mostafashinko:hover .the-blue-circle {
+            width: 75px;
+            height: 75px;
+            background-color: rgb(107, 170, 107);
+        }
+
+
+        .mostafashinko:active .the-red-circle {
+            width: 270px;
+            height: 270px;
+            background-color: green;
+        }
+
+        .mostafashinko:active .the-green-circle {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+
+        .mostafashinko:active .the-blue-circle {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(255, 0, 0);
+        }
+
+        .mostafashinko .The-black-hole {
+            background-color: black;
+            height: 30px;
+            width: 30px;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .mostafashinko #checkbox:checked+.The-black-hole {
+            transform: scale(200);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="checkbox" class="mostafashinko">
+        <input type="checkbox" id="checkbox" />
+        <div class="The-black-hole"></div>
+        <div class="the-red-circle"></div>
+        <div class="the-green-circle"></div>
+        <div class="the-blue-circle"></div>
+    </label>
+
+</body>
+
+</html>
