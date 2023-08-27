@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="shape.png">
+    
+    <title>Circles</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(
+                90deg,
+                rgb(255, 0, 0),
+                rgb(0, 132, 255),
+                rgb(0, 0, 255),
+                rgb(251, 0, 255),
+                rgb(2, 0, 242)
+            )
+            no-repeat;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        
+        .circled-circles * {
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .5s;
+        }
+
+        .circled-circles .red{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .circled-circles .green{
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+
+        .circled-circles .blue{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .circled-circles:hover .red{
+            width: 350px;
+            height: 350px;
+            background-color: blue;
+        }
+
+        .circled-circles:hover .green{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .circled-circles:hover .blue{
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+
+        .circled-circles:active .red{
+            width: 330px;
+            height: 330px;
+            background-color: green;
+        }
+
+        .circled-circles:active .green{
+            width: 280px;
+            height: 280px;
+            background-color: blue;
+        }
+
+        .circled-circles:active .blue{
+            width: 220px;
+            height: 220px;
+            background-color: red;
+        }
+        
+        .circled-circles .black{
+            background-color: black;
+            height: 30px;
+            width: 30px;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .circled-circles #checkbox:checked + .black{
+            transform: scale(70);
+        }
+
+    </style>
+</head>
+<body>
+    
+<label for="checkbox" class="circled-circles">
+    <input type="checkbox" id="checkbox" />
+    <div class="black"></div>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+</label>
+</body>
+</html>
